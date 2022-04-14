@@ -3,12 +3,11 @@ $(document).ready(()=>{
 
 
 
-
+$(".savebtn").click(function () {
+    var areaText = $(this).siblings("textarea")[0].value;
+    var id = $(this).siblings("textarea")[0].id;
+    console.log(areaText);
+    localStorage.setItem("event" + id, areaText);
+});
     
 });
-
-const buttonSaveBtn = document.querySelector(
-    ".col-md-1 saveBtn"
-)
-
-buttonSaveBtn.addEventListener("click")
